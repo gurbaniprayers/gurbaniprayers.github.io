@@ -12,6 +12,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+if(getUrlParameter('name') != undefined)
 $('#paathname').text(getUrlParameter('name'));
 
 var currentlyPlaying = false;
@@ -20,21 +21,21 @@ function start(){
     if(currentlyPlaying == false){
         audioElement.play();
         currentlyPlaying = true;
-        $('#startbutton').text('STOP');
+        $('#startbutton').text('Stop');
         //set first 3 values to be zero
         if(counter == 0){
             $('#div0').text('0');
-            $('#div1').text('1');
-            $('#div2').text('2');
+            // $('#div1').text('1');
+            // $('#div2').text('2');
             lines[0][2] = 0;
-            lines[1][2] = 1;
-            lines[2][2] = 2;
-            counter = 2;
+            // lines[1][2] = 1;
+            // lines[2][2] = 2;
+            counter = 0;
         }
     }else{
         audioElement.pause();
         currentlyPlaying = false;
-        $('#startbutton').text('START');
+        $('#startbutton').text('Start');
     }
 }
 
@@ -49,6 +50,7 @@ function getTime() {
             }, 1000);
 }
 
+if(getUrlParameter('id') != undefined)
 getData(getUrlParameter('id'));
 
 var textFile = null,
@@ -140,3 +142,4 @@ function setuplearning(){
     var filename = getUrlParameter('id')+'.json';
     $('#downloadlink').attr('download',filename)
 }
+
