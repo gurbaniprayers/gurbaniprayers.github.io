@@ -10,7 +10,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
+<body onload="setuplearning()">
 
   <nav class="orange lighten-1" role="navigation">
     <div class="nav-wrapper container">
@@ -39,9 +39,11 @@
           </tr> -->
         </table>
       </div>
+      <a download="file.json" class="orange waves-effect waves-light btn" id="downloadlink" style="display: none">
+        Download
+      </a>
 
       <br><br>
-
     </div>
   </div>
 

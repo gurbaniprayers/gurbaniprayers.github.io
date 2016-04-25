@@ -22,23 +22,50 @@ function start(){
         currentlyPlaying = true;
         $('#startbutton').text('STOP');
         //set first 3 values to be zero
-        $('#div0').text('0');
-        $('#div1').text('0');
-        $('#div2').text('0');
-        counter = 2;
+        if(counter == 0){
+            $('#div0').text('0');
+            $('#div1').text('1');
+            $('#div2').text('2');
+            lines[0][2] = 0;
+            lines[1][2] = 1;
+            lines[2][2] = 2;
+            counter = 2;
+        }
+    }else{
+        audioElement.pause();
+        currentlyPlaying = false;
+        $('#startbutton').text('START');
     }
 }
 
 function getTime() {
     // console.log(Math.floor(audioElement.currentTime));
-    counter++
-    $('#div' + counter).text(Math.floor(audioElement.currentTime));
+    counter++;
+    var currentTimeValue = Math.floor(audioElement.currentTime);
+    lines[counter][2] = currentTimeValue;
+    $('#div' + counter).text(currentTimeValue);
     $('html, body').animate({
                 scrollTop: $('#div' + counter).offset().top - 200
             }, 1000);
 }
 
 getData(getUrlParameter('id'));
+
+var textFile = null,
+makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+};
+
 var audioElement;
 function getData(filename) {
     $.ajax({
@@ -50,6 +77,19 @@ function getData(filename) {
 
     audioElement = document.createElement('audio');
     audioElement.setAttribute('src', 'audio/' + filename +'.mp3');
+
+    audioElement.addEventListener("ended", function(){
+        audioElement.currentTime = 0;
+        console.log("ended");
+
+
+        var link = document.getElementById('downloadlink');
+        link.href = makeTextFile(JSON.stringify(lines));
+        link.style.display = 'block';
+
+
+    });
+
 };
 
 var lines = [];
@@ -96,4 +136,7 @@ function processData(allText) {
 
 }
 
-
+function setuplearning(){
+    var filename = getUrlParameter('id')+'.json';
+    $('#downloadlink').attr('download',filename)
+}
