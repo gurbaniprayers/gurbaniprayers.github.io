@@ -22,3 +22,9 @@ td.customfont {
 a.customfont { 
     font-family: "GurbaniAkharHeavy", Verdana, Tahoma;
 }
+a.customsize {
+	font-size: 1.8rem;
+}
+table.customsize {
+	font-size: 1.8rem;
+}

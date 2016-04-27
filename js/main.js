@@ -35,13 +35,13 @@ function setButtonsForEnglish(){
     $('#rehraassahib').text('Rehraas Sahib');
     $('#kirtansohaila').text('Kirtan Sohaila');
 
-    $('#japjisahib').attr('class', 'btn-large waves-effect waves-light orange');
-    $('#jaapsahib').attr('class', 'btn-large waves-effect waves-light orange');
-    $('#tavparsadsavaiye').attr('class', 'btn-large waves-effect waves-light orange');
-    $('#chaupaisahib').attr('class', 'btn-large waves-effect waves-light orange');
-    $('#anandsahib').attr('class', 'btn-large waves-effect waves-light orange');
-    $('#rehraassahib').attr('class', 'btn-large waves-effect waves-light orange');
-    $('#kirtansohaila').attr('class', 'btn-large waves-effect waves-light orange');
+    $('#japjisahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#jaapsahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#tavparsadsavaiye').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#chaupaisahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#anandsahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#rehraassahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#kirtansohaila').attr('class', 'btn-large waves-effect waves-light orange customsize');
 }
 function setButtonsForPunjabi() {
     
@@ -56,13 +56,13 @@ function setButtonsForPunjabi() {
     $('#rehraassahib').text('rhrwis swihb');
     $('#kirtansohaila').text('kIrqn soihlw');
 
-    $('#japjisahib').attr('class', 'customfont btn-large waves-effect waves-light orange');
-    $('#jaapsahib').attr('class', 'customfont btn-large waves-effect waves-light orange');
-    $('#tavparsadsavaiye').attr('class', 'customfont btn-large waves-effect waves-light orange');
-    $('#chaupaisahib').attr('class', 'customfont btn-large waves-effect waves-light orange');
-    $('#anandsahib').attr('class', 'customfont btn-large waves-effect waves-light orange');
-    $('#rehraassahib').attr('class', 'customfont btn-large waves-effect waves-light orange');
-    $('#kirtansohaila').attr('class', 'customfont btn-large waves-effect waves-light orange');
+    $('#japjisahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#jaapsahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#tavparsadsavaiye').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#chaupaisahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#anandsahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#rehraassahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#kirtansohaila').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
 }
 
 setLanguage();
