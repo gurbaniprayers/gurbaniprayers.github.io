@@ -14,7 +14,7 @@
 }
 @font-face {
     font-family: "GurbaniAkharHeavy";
-    src: url(font/Gurakh_h.ttf) format("truetype");
+    src: url(../font/Gurakh_h.ttf) format("truetype");
 }
 td.customfont { 
     font-family: "GurbaniAkharHeavy", Verdana, Tahoma;
