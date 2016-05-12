@@ -25,6 +25,8 @@ function start(){
         //set first 3 values to be zero
         if(counter == 0){
             $('#div0').text('0');
+            $('#divsecond0').text('0');
+
             // $('#div1').text('1');
             // $('#div2').text('2');
             lines[0][2] = 0;
@@ -45,6 +47,7 @@ function getTime() {
     var currentTimeValue = Math.floor(audioElement.currentTime);
     lines[counter][2] = currentTimeValue;
     $('#div' + counter).text(currentTimeValue);
+    $('#divsecond' + counter).text(currentTimeValue);
     $('html, body').animate({
                 scrollTop: $('#div' + counter).offset().top - 200
             }, 1000);
@@ -125,6 +128,10 @@ function processData(allText) {
             "</td>"+
             "<td >"+
             lines[i][0]+
+            "</td>"+
+            "<td>"+
+                "<div id=\"divsecond" + i +"\">"+
+                "</div"+
             "</td>"+
             "<td class=\"customfont\">"+
             lines[i][1]+
