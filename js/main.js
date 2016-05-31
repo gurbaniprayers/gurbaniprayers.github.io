@@ -35,13 +35,13 @@ function setButtonsForEnglish(){
     $('#rehraassahib').text('Rehraas Sahib');
     $('#kirtansohaila').text('Kirtan Sohaila');
 
-    $('#japjisahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
-    $('#jaapsahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
-    $('#tavparsadsavaiye').attr('class', 'btn-large waves-effect waves-light orange customsize');
-    $('#chaupaisahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
-    $('#anandsahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
-    $('#rehraassahib').attr('class', 'btn-large waves-effect waves-light orange customsize');
-    $('#kirtansohaila').attr('class', 'btn-large waves-effect waves-light orange customsize');
+    $('#japjisahib').attr('class', 'btn-large waves-effect waves-light orange smallsize');
+    $('#jaapsahib').attr('class', 'btn-large waves-effect waves-light orange smallsize');
+    $('#tavparsadsavaiye').attr('class', 'btn-large waves-effect waves-light orange smallsize');
+    $('#chaupaisahib').attr('class', 'btn-large waves-effect waves-light orange smallsize');
+    $('#anandsahib').attr('class', 'btn-large waves-effect waves-light orange smallsize');
+    $('#rehraassahib').attr('class', 'btn-large waves-effect waves-light orange smallsize');
+    $('#kirtansohaila').attr('class', 'btn-large waves-effect waves-light orange smallsize');
 }
 function setButtonsForPunjabi() {
     
@@ -56,16 +56,14 @@ function setButtonsForPunjabi() {
     $('#rehraassahib').text('rhrwis swihb');
     $('#kirtansohaila').text('kIrqn soihlw');
 
-    $('#japjisahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
-    $('#jaapsahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
-    $('#tavparsadsavaiye').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
-    $('#chaupaisahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
-    $('#anandsahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
-    $('#rehraassahib').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
-    $('#kirtansohaila').attr('class', 'customfont btn-large waves-effect waves-light orange customsize');
+    $('#japjisahib').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
+    $('#jaapsahib').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
+    $('#tavparsadsavaiye').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
+    $('#chaupaisahib').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
+    $('#anandsahib').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
+    $('#rehraassahib').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
+    $('#kirtansohaila').attr('class', 'customfont btn-large waves-effect waves-light orange smallsize');
 }
-
-setLanguage();
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -217,4 +215,29 @@ function setuplearning(){
     var filename = getUrlParameter('id')+'.json';
     $('#downloadlink').attr('download',filename)
 }
+
+//id=japjisahib
+
+function createMainButtons(id, englishName, gurmukhiName){
+    var value = '<div class="col s12 m3">'+
+                  '<div class="card small">'+
+                    '<center><div class="card-image waves-effect waves-block waves-light">'+
+                      '<img class="activator" src="image/'+id+'.png" style="max-width:100px; max-height:100px" >'+
+                    '</div></center>'+
+                    '<div class="card-content" style="text-align: center;">'+
+                        '<span class="card-title activator grey-text text-darken-4">'+
+                          '<a id="'+id+'" href="learn.html?id='+id+'&name='+englishName+'&gname='+gurmukhiName+'" class="btn-large waves-effect waves-light orange smallsize">'+englishName+'</a>'+
+                        '</span>'+
+                    '</div>'+                    
+                  '</div>'+
+                '</div>';
+    $('#mainRow').append(value)
+}
+createMainButtons('japjisahib', 'Japji Sahib', 'jpujI swihb');
+createMainButtons('jaapsahib', 'Jaap Sahib', 'jwpu swihb');
+createMainButtons('tavparsadsavaiye', 'Tav Parsad Savaiye', 'qÍ pRswid sv`Xy');
+createMainButtons('chaupaisahib', 'Chaupai Sahib', 'cOpeI swihb');
+createMainButtons('anandsahib', 'Anand Sahib', 'Anµdu swihb');
+createMainButtons('rehraassahib', 'Rehraas Sahib', 'rhrwis swihb'); 
+createMainButtons('kirtansohaila', 'Kirtan Sohaila', 'kIrqn soihlw'); 
 

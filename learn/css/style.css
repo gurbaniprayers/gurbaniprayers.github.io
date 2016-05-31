@@ -28,3 +28,21 @@ a.customsize {
 table.customsize {
 	font-size: 1.8rem;
 }
+
+.card.small {
+  height: 190px;
+  width: 280px;
+}
+
+.card.small .card-image {
+	max-height: 240px;
+  	max-width: 200px;
+  	overflow: hidden;
+}
+
+.smallsize {
+	white-space: nowrap;
+	font-size: 0.8em
+}
+
+
