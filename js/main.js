@@ -219,7 +219,7 @@ function setuplearning(){
 //id=japjisahib
 
 function createMainButtons(id, englishName, gurmukhiName){
-    var value = '<div class="col s12 m3">'+
+    var value = '<div class="col s12 m4">'+
                   '<div class="card small">'+
                     '<center><div class="card-image waves-effect waves-block waves-light">'+
                       '<img class="activator" src="image/'+id+'.png" style="max-width:100px; max-height:100px" >'+
@@ -241,3 +241,4 @@ createMainButtons('anandsahib', 'Anand Sahib', 'Anµdu swihb');
 createMainButtons('rehraassahib', 'Rehraas Sahib', 'rhrwis swihb'); 
 createMainButtons('kirtansohaila', 'Kirtan Sohaila', 'kIrqn soihlw'); 
 
+setLanguage();
