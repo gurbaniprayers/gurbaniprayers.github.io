@@ -219,7 +219,7 @@ function setuplearning(){
 //id=japjisahib
 
 function createMainButtons(id, englishName, gurmukhiName){
-    var value = '<div class="col s4 m4" >'+
+    var value = '<div class="col s12 m4" >'+
                   '<div class="card small">'+
                     '<center><div class="card-image waves-effect waves-block waves-light">'+
                       '<img class="activator" src="image/'+id+'.png" style="max-width:50%; max-height:50%" >'+
