@@ -275,9 +275,6 @@ $("a").hover(function(){
       $('#maintitle').addClass("customfont");
       $('#maintitle').text(gurmukhiName);
     }
-  }else{
-    $('#maintitle').removeClass("customfont");
-    $('#maintitle').text("Gurbani Prayers");
   }
 });
 
