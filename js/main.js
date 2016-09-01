@@ -256,19 +256,18 @@ createMainButtons('sukhmanisahib', 'Sukhmani Sahib', 'suKmnI swihb');
 $("a").hover(function(){
   var englishName = $(this).attr("englishName");
   var gurmukhiName = $(this).attr("gurmukhiName");
-  if(localStorage.language == 'english'){
-    $('#maintitle').removeClass("customfont");
-    $('#maintitle').text(englishName);
+  if(englishName != undefined){
+    if(localStorage.language == 'english'){
+      $('#maintitle').removeClass("customfont");
+      $('#maintitle').text(englishName);
+    }else {
+      $('#maintitle').addClass("customfont");
+      $('#maintitle').text(gurmukhiName);
+    }
   }else{
-    $('#maintitle').addClass("customfont");
-    $('#maintitle').text(gurmukhiName);
+    $('#maintitle').removeClass("customfont");
+    $('#maintitle').text("Gurbani Prayers");
   }
 });
-
-$("a").mouseout(function(){
-  $('#maintitle').removeClass("customfont");
-  $('#maintitle').text("Gurbani Prayers");
-});
-
 
 setLanguage();
