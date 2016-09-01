@@ -222,6 +222,8 @@ function processData(allText) {
 function setuplearning(){
     if(window.screen.availWidth < 360){
       $('#maintitle').html('<i class="material-icons">keyboard_arrow_left</i>')
+    }else{
+      $('#maintitle').html('<i class="material-icons">keyboard_arrow_left</i> Gurbani Prayers')
     }
     var filename = getUrlParameter('id')+'.json';
     $('#downloadlink').attr('download',filename)
