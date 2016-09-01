@@ -271,3 +271,35 @@ $("a").hover(function(){
 });
 
 setLanguage();
+
+function getSupportInfo(){
+  $('#importDataHere').append(getCard('Buy T Shirt', 'https://images-na.ssl-images-amazon.com/images/I/3190RU-sb6L.jpg', 'https://www.amazon.com/dp/B016LPLKMY'));
+}
+
+function getCreditInfo(){
+  $('#importDataHere').append(getCard('Amanpreet Gill', 'http://graph.facebook.com/100001409270481/picture?type=large', 'https://www.facebook.com/amanpreet.gill.7777?fref=ts'));
+  $('#importDataHere').append(getCard('Amrit', 'http://graph.facebook.com/100005088193860/picture?type=large', 'https://www.facebook.com/amritdaurl?fref=ts'));
+  $('#importDataHere').append(getCard('Jas Simrat Kaur', 'http://graph.facebook.com/100000690897889/picture?type=large', 'https://www.facebook.com/jas.s.kaur.3551?fref=ts'));
+}
+
+function getCard(name, photo, url){
+  var value = '<div class="col s12 m4">'+
+    '<div class="card">'+
+      '<div class="card-image waves-effect waves-block waves-light">'+
+        '<img class="activator" src="'+
+        photo+
+        '">'+
+      '</div>'+
+      '<div class="card-content" style="text-align: center;">'+
+        '<span class="card-title activator grey-text text-darken-4">'+
+          '<a href="'+
+          url+
+          '">'+
+          name+
+          '</a>'+
+        '</span>'+
+        '</div>'+
+    '</div>'+
+  '</div>';
+  return value;
+}
