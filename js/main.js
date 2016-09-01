@@ -22,6 +22,10 @@ function changeLanguage() {
     }
 }
 
+function refreshPage() {
+    location.reload();
+}
+
 function setButtonsForEnglish(){
 
     $('#changeLanguageButton').text('pµjwbI');
@@ -216,6 +220,9 @@ function processData(allText) {
 }
 
 function setuplearning(){
+    if(window.screen.availWidth < 360){
+      $('#maintitle').html('<i class="material-icons">keyboard_arrow_left</i>')
+    }
     var filename = getUrlParameter('id')+'.json';
     $('#downloadlink').attr('download',filename)
 }
@@ -224,7 +231,7 @@ function setuplearning(){
 
 function createMainButtons(id, englishName, gurmukhiName){
     var value =
-                '<div class="col s12 m3" >'+
+                '<div style="display: none;" class="col s12 m3" >'+
                   '<div class="card">'+
                     '<center><div class="card-image waves-effect waves-block waves-light">'+
                     '<a englishName="'+
@@ -241,8 +248,10 @@ function createMainButtons(id, englishName, gurmukhiName){
                   //   '</div>'+
                   // '</div>'+
                 '</div>';
+                var value2 = $(value);
+                $('#mainRow').append(value2);
+                value2.slideDown();
 
-    $('#mainRow').append(value)
 }
 createMainButtons('japjisahib', 'Japji Sahib', 'jpujI swihb');
 createMainButtons('jaapsahib', 'Jaap Sahib', 'jwpu swihb');
