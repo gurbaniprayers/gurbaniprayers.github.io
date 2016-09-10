@@ -165,9 +165,11 @@ function getData(filename) {
 	    	$('#' + divToUpdate).attr('style','font-weight: bold');
 	    	oldDivId = divToUpdate;
         // console.log(screen.height/4)
-		    $('html, body').animate({
-	            scrollTop: $('#div' + Math.floor(audioElement.currentTime)).offset().top - (screen.height/4)
-	        }, 500);
+        if(isItScrolling == false){
+  		    $('html, body').animate({
+  	            scrollTop: $('#div' + Math.floor(audioElement.currentTime)).offset().top - (screen.height/4)
+  	        }, 500);
+        }
 		}
 	}
 
@@ -312,3 +314,17 @@ function getCard(name, photo, url){
   '</div>';
   return value;
 }
+
+var timer = null;
+var isItScrolling = false;
+console.log('false')
+$(window)[0].addEventListener('scroll', function() {
+    isItScrolling = true;
+    if(timer !== null) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+          // do something
+          isItScrolling = false;
+    }, 750);
+}, false);
