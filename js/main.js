@@ -164,9 +164,10 @@ function getData(filename) {
 	    	$('#' + oldDivId).attr('style','font-weight: normal');
 	    	$('#' + divToUpdate).attr('style','font-weight: bold');
 	    	oldDivId = divToUpdate;
+        // console.log(screen.height/4)
 		    $('html, body').animate({
-	            scrollTop: $('#div' + Math.floor(audioElement.currentTime)).offset().top - 200
-	        }, 1000);
+	            scrollTop: $('#div' + Math.floor(audioElement.currentTime)).offset().top - (screen.height/4)
+	        }, 500);
 		}
 	}
 
