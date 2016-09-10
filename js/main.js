@@ -167,7 +167,7 @@ function getData(filename) {
         // console.log(screen.height/4)
         if(isItScrolling == false){
   		    $('html, body').animate({
-  	            scrollTop: $('#div' + Math.floor(audioElement.currentTime)).offset().top - (screen.height/4)
+  	            scrollTop: $('#div' + Math.floor(audioElement.currentTime)).offset().top - (screen.height/3)
   	        }, 500);
         }
 		}
