@@ -16,17 +16,17 @@
     font-family: "GurbaniAkharHeavy";
     src: url(../font/Gurakh_h.ttf) format("truetype");
 }
-td.customfont { 
+td.customfont {
     font-family: "GurbaniAkharHeavy", Verdana, Tahoma;
 }
-a.customfont { 
+a.customfont {
     font-family: "GurbaniAkharHeavy", Verdana, Tahoma;
 }
 a.customsize {
 	font-size: 1.8rem;
 }
 table.customsize {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 }
 
 .card.small {
@@ -44,4 +44,3 @@ table.customsize {
 	white-space: nowrap;
 	font-size: 70%
 }
-
