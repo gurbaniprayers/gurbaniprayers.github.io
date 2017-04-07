@@ -235,7 +235,7 @@ function setuplearning(){
 //id=japjisahib
 
 function createMainButtons(id, englishName, gurmukhiName){
-	var screenSize = window.screen.availWidth > 400 ? 's3' : 's4';
+	var screenSize = window.screen.availWidth > 400 ? 's3' : 's5';
     var value =
                 '<div style="display: none;" class="col ' + screenSize + '" >'+
                   '<div class="card">'+
