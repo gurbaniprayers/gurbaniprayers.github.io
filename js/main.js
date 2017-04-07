@@ -289,9 +289,9 @@ function getSupportInfo(){
 }
 
 function getCreditInfo(){
-  $('#importDataHere').append(getCard('Amanpreet Gill', 'http://graph.facebook.com/100001409270481/picture?type=large', 'https://www.facebook.com/amanpreet.gill.7777?fref=ts'));
-  $('#importDataHere').append(getCard('Amrit', 'http://graph.facebook.com/100005088193860/picture?type=large', 'https://www.facebook.com/amritdaurl?fref=ts'));
-  $('#importDataHere').append(getCard('Jas Simrat Kaur', 'http://graph.facebook.com/100000690897889/picture?type=large', 'https://www.facebook.com/jas.s.kaur.3551?fref=ts'));
+  $('#importDataHere').append(getCard('Amanpreet Gill', 'http://graph.facebook.com/100001409270481/picture?type=large', 'https://www.facebook.com/amanpreet.gill.7777'));
+  $('#importDataHere').append(getCard('Amrit Singh Bains', 'http://graph.facebook.com/100005088193860/picture?type=large', 'https://www.facebook.com/amritsbains'));
+  $('#importDataHere').append(getCard('Jas Simrat Kaur', 'http://graph.facebook.com/100000690897889/picture?type=large', 'https://www.facebook.com/jas.s.kaur.3551'));
 }
 
 function getCard(name, photo, url){
