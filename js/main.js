@@ -236,7 +236,7 @@ function setuplearning(){
 
 function createMainButtons(id, englishName, gurmukhiName){
     var value =
-                '<div style="display: none;" class="col s12 m3" >'+
+                '<div style="display: none;" class="col s3" >'+
                   '<div class="card">'+
                     '<center><div class="card-image waves-effect waves-block waves-light">'+
                     '<a englishName="'+
