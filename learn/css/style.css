@@ -44,3 +44,9 @@ table.customsize {
 	white-space: nowrap;
 	font-size: 70%
 }
+
+.activator:hover{
+	max-width: 98%;
+    	max-height: 98%;
+    	opacity: 0.9;
+}
