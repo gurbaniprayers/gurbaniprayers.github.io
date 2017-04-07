@@ -255,7 +255,7 @@ function createMainButtons(id, englishName, gurmukhiName){
                 '</div>';
                 var value2 = $(value);
                 $('#mainRow').append(value2);
-                value2.slideDown();
+                value2.show();
 
 }
 createMainButtons('japjisahib', 'Japji Sahib', 'jpujI swihb');
